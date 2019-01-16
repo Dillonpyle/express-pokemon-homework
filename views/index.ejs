@@ -10,7 +10,8 @@
 
 <ul class="pokemon">
 <%for(i = 0; i < pokemonList.length; i++) {%>
-<a href='/index/<%= i %>'><li><%=  pokemonList[i].name %>  </li></a>
+<li><%=  pokemonList[i].name %>  </li>
+<a href='/pokemon/<%=i%>'>show page</a>
 <%} %>
 </ul>
 
