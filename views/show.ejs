@@ -6,7 +6,9 @@
 <body>
 
 <%=JSON.stringify(pokemon)%>
-
+        <form method="POST" action="<%=index%>?_method=DELETE">
+            <button type="submit">Delete resource</button>
+        </form>
 
 </body>
 </html>

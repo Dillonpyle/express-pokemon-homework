@@ -9,11 +9,15 @@
 <body>
 
 <ul class="pokemon">
-<%for(i = 0; i < pokemonList.length; i++) {%>
-<li><%=  pokemonList[i].name %>  </li>
-<a href='/pokemon/<%=i%>'>show page</a>
-<%} %>
+    <%for(i = 0; i < pokemonList.length; i++) {%>
+        <li><%=  pokemonList[i].name %>  </li>
+        <form method="POST" action="pokemon/<%=i%>?_method=DELETE">
+            <button type="submit">Delete resource</button>
+        </form>
+        <a href='/pokemon/<%=i%>'>show page</a>
+    <a href="/pokemon/<%=i%>/edit">edit</a>
+    <%} %>
 </ul>
-
+<a href="/pokemon/new">Create a New pokemon</a>
 </body>
 </html>
